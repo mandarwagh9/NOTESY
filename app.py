@@ -5,7 +5,7 @@ import shutil
 
 from PyPDF2 import PdfReader
 from PIL import Image
-import pytesseract
+import easyocr
 
 # Gemini API integration
 from google import genai
@@ -29,11 +29,15 @@ def extract_text_from_pdf(file_path):
 
 def extract_text_from_image(file_path):
     try:
-        image = Image.open(file_path)
-        text = pytesseract.image_to_string(image)
-        return text
+        # Initialize the reader with the language(s) you need (e.g., English)
+        reader = easyocr.Reader(['en'])
+        # Read text from the image without bounding box details
+        result = reader.readtext(file_path, detail=0)
+        # Join the returned list of text lines into one string
+        extracted_text = "\n".join(result)
+        return extracted_text
     except Exception as e:
-        return f"Error extracting text from image: {e}"
+        return f"Error extracting text from image with EasyOCR: {e}"
 
 def generate_with_gemini(prompt: str) -> str:
     try:
