@@ -1,6 +1,6 @@
 Flask
 PyPDF2
 Pillow
-pytesseract
+easyocr
 google-genai
 gunicorn
