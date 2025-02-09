@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NOTESY: Notes Assistant </title>
+  <title>Notes Assistant Web App</title>
   <link rel="stylesheet" href="style.css">
   <!-- jsPDF Library for PDF downloads -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -11,7 +11,7 @@
   <header>
     <!-- Replace 'logo.png' with your actual logo file -->
     <img src="logo.png" alt="OpenLabs Logo" id="logo">
-    <h1>NOTESY: Notes Assistant</h1>
+    <h1>Notes Assistant</h1>
   </header>
   
   <main>
@@ -19,6 +19,8 @@
     <section id="upload-section">
       <input type="file" id="fileInput" accept=".pdf,image/*">
       <button id="uploadButton">Upload and Analyze</button>
+      <!-- Spinner is placed here so it is always visible during processing -->
+      <div id="spinner" class="hidden"></div>
     </section>
     
     <!-- Results Section (initially hidden) -->
