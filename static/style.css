@@ -1,0 +1,143 @@
+/* Reset and basic styles */
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #F5F7FA;
+    color: #333;
+  }
+  
+  /* Header styling */
+  header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  header #logo {
+    width: 50px;
+    margin-right: 20px;
+  }
+  header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  /* Main container */
+  main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  
+  /* Upload section */
+  #upload-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  #upload-section input[type="file"] {
+    margin-bottom: 10px;
+  }
+  #upload-section button {
+    background-color: #6366F1; /* OpenLabs-inspired color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #upload-section button:hover {
+    background-color: #4F46E5;
+  }
+  
+  /* Hide section initially */
+  .hidden {
+    display: none;
+  }
+  
+  /* Result card styling */
+  .result-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+  }
+  .result-card h2 {
+    margin-top: 0;
+  }
+  
+  /* Summary content */
+  #summary-content {
+    margin: 20px 0;
+    line-height: 1.6;
+  }
+  
+  /* Flashcards container grid */
+  #flashcards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Flashcard styles */
+  .flashcard {
+    perspective: 1000px;
+  }
+  .flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  .flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+  }
+  .flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .flashcard-front {
+    background-color: #F9FAFB;
+  }
+  .flashcard-back {
+    background-color: #E5E7EB;
+    transform: rotateY(180deg);
+  }
+  
+  /* Exam section */
+  #exam-content {
+    margin: 20px 0;
+    white-space: pre-wrap; /* preserve newlines */
+  }
+  
+  /* Download buttons (general) */
+  button {
+    margin-top: 10px;
+    background-color: #6366F1;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #4F46E5;
+  }
+  
