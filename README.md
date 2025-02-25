@@ -120,4 +120,4 @@ This project is licensed under the [MIT License](LICENSE).
 - [Pillow](https://pillow.readthedocs.io/)
 - [pytesseract](https://pypi.org/project/pytesseract/)
 - [jsPDF](https://github.com/parallax/jsPDF)
-- Thanks to OpenLabs for the inspiration and branding.
+- Thanks to OpenAI for the inspiration and branding.
